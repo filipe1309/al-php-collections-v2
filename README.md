@@ -29,10 +29,8 @@ cd al-php-collections-v2
 ## :runner: Running
 
 ```sh
-docker-compose up
+php ...
 ```
-
-> Access http://localhost:8000
 
 ## License
 
