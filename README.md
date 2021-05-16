@@ -2,32 +2,28 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/Code-PHP-informational?style=flat-square&logo=php&color=777bb4&logoColor=8892BF" alt="PHP" />
-    <img src="https://img.shields.io/badge/Tools-Docker-informational?style=flat-square&logo=docker&color=2496ED" alt="Docker" />
 </p>
 
 ## 💬 About
 
-This project was developed following [[COURSE_NAME]]([COURSE_LINK]) course.
+This project was developed following Alura's [PHP: Dominando as Collections](https://cursos.alura.com.br/course/php-dominando-collections) course.
 
 ## :computer: Technologies
 
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
 - [PHP](https://php.net/)
 
 ## :scroll: Requirements
 
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
+- [PHP](https://php.net/)
 
 ## :cd: Installation
 
 ```sh
-git clone [PROJECT_REPO_LINK]
+git clone git@github.com:filipe1309/al-php-collections-v2.git
 ```
 
 ```sh
-cd [PROJECT_REPO_NAME]
+cd al-php-collections-v2
 ```
 
 ## :runner: Running
@@ -37,20 +33,6 @@ docker-compose up
 ```
 
 > Access http://localhost:8000
-
-## :white_check_mark: Tests
-
-After up the container:
-
-```sh
-docker-compose exec -t [CONTAINER_SERVICE_NAME] ./vendor/bin/phpunit
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
