@@ -36,3 +36,16 @@ for ($i = 0; $i < $totalItems; $i++) {
 
 $memoryInMB = number_format(memory_get_usage() / 1024 / 1024, 2) . ' MB';
 var_dump($totalItems . ': ' . $memoryInMB);
+
+
+// Solution with SplFixedArray
+
+$totalItems = 32769;
+$array = new SplFixedArray($totalItems);
+
+for ($i = 0; $i < $totalItems; $i++) {
+    $array[$i] = $i;
+}
+
+$memoryInMB = number_format(memory_get_usage() / 1024 / 1024, 2) . ' MB';
+var_dump($totalItems . '(SplFixedArray): ' . $memoryInMB);
