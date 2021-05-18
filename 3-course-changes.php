@@ -18,3 +18,15 @@ $course->addChange('Change 3');
 foreach ($course->getChanges() as $change) {
     echo $change . PHP_EOL;
 }
+
+
+// SplQueue
+
+$course->addStudentToWait('Bob Dylan 1');
+$course->addStudentToWait('John Doe 2');
+$course->addStudentToWait('Elvis Presley 3');
+
+
+foreach ($course->getWaitingStudents() as $student) {
+    echo $student . PHP_EOL;
+}
