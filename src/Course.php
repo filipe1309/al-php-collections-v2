@@ -21,6 +21,6 @@ class Course
 
     public function getChanges(): SplDoublyLinkedList
     {
-        return $this->changes;
+        return clone $this->changes;
     }
 }
