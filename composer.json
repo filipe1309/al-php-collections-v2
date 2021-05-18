@@ -1,0 +1,13 @@
+{
+    "name": "devontherun/alura-php-collections-v2",
+    "authors": [{
+        "name": "Filipe Leuch Bonfim",
+        "email": "filipe1309@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Dotr\\": "src/"
+        }
+    }
+}
