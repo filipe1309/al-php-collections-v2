@@ -3,6 +3,7 @@
 namespace Dotr;
 
 use SplDoublyLinkedList;
+use SplObjectStorage;
 use SplQueue;
 use SplStack;
 
@@ -10,13 +11,13 @@ class Course
 {
     private SplStack $changes;
     private SplQueue $waitingStudentQueue;
-    private SplDoublyLinkedList $enrolledStudents;
+    private SplObjectStorage $enrolledStudents;
 
     public function __construct(public string $name)
     {
         $this->changes = new SplStack();
         $this->waitingStudentQueue = new SplQueue();
-        $this->enrolledStudents = new SplDoublyLinkedList();
+        $this->enrolledStudents = new SplObjectStorage();
     }
 
     public function addChange(string $change): void
@@ -29,7 +30,7 @@ class Course
         return clone $this->changes;
     }
 
-    public function addStudentToWait(string $student): void
+    public function addStudentToWait(Student $student): void
     {
         $this->waitingStudentQueue->enqueue($student);
     }
@@ -39,12 +40,12 @@ class Course
         return clone $this->waitingStudentQueue;
     }
 
-    public function enrollStudent(string $student): void
+    public function enrollStudent(Student $student): void
     {
-        $this->enrolledStudents->push($student);
+        $this->enrolledStudents->attach($student);
     }
 
-    public function getEnrolledStudents(): SplDoublyLinkedList
+    public function getEnrolledStudents(): SplObjectStorage
     {
         return clone $this->enrolledStudents;
     }

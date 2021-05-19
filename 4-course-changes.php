@@ -3,6 +3,7 @@
 // SplDoublyLinkedList -> SplStack
 
 use Dotr\Course;
+use Dotr\Student;
 
 require_once 'vendor/autoload.php';
 
@@ -17,23 +18,24 @@ foreach ($course->getChanges() as $change) {
 }
 
 
-// SplQueue
+$student1 = new Student('Bob Dylan 1');
 
-$course->addStudentToWait('Bob Dylan 1');
-$course->addStudentToWait('John Doe 2');
-$course->addStudentToWait('Elvis Presley 3');
+// SplQueue
+$course->addStudentToWait($student1);
+$course->addStudentToWait(new Student('John Doe 2'));
+$course->addStudentToWait(new Student('Elvis Presley 3'));
 
 
 foreach ($course->getWaitingStudents() as $student) {
-    echo $student . PHP_EOL;
+    echo $student->name . PHP_EOL;
 }
 
 echo '-------------------' . PHP_EOL;
 
-$course->enrollStudent('Bob Dylan 1');
-$course->enrollStudent('John Doe 2');
-$course->enrollStudent('Bob Dylan 1');
+$course->enrollStudent($student1);
+$course->enrollStudent(new Student('John Doe 2'));
+$course->enrollStudent($student1);
 
 foreach ($course->getEnrolledStudents() as $student) {
-    echo $student . PHP_EOL;
+    echo $student->name . PHP_EOL;
 }
