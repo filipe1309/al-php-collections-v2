@@ -30,3 +30,14 @@ https://www.php.net/manual/en/class.splfixedarray.php
 composer init
 composer dumpautoload
 ```
+
+## Class 5
+
+```sh
+php -a
+```
+
+Set = Value  
+Map = Key + Value
+
+https://www.php.net/manual/en/spl.datastructures.php
