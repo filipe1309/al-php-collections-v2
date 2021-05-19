@@ -39,3 +39,7 @@ $course->enrollStudent($student1);
 foreach ($course->getEnrolledStudents() as $student) {
     echo $student->name . PHP_EOL;
 }
+
+$isStuent1Enrolled = $course->getEnrolledStudents()->contains($student1);
+
+var_dump($isStuent1Enrolled);
