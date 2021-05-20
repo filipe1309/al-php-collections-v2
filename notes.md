@@ -41,3 +41,16 @@ Set = Value
 Map = Key + Value
 
 https://www.php.net/manual/en/spl.datastructures.php
+
+## Class 6
+
+### PHP DS (Data Structures)
+
+https://github.com/php-ds/ext-ds
+
+```sh
+pecl install ds
+php --ini
+vi ...extension=ds.so
+php -m # ds
+```
