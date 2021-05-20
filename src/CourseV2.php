@@ -22,6 +22,11 @@ class CourseV2
         $this->changes->push($change);
     }
 
+    public function undoChange(): void
+    {
+        $this->changes->pop();
+    }
+
     public function getChanges(): Stack
     {
         return $this->changes->copy();

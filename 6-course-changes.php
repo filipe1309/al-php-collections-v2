@@ -32,6 +32,7 @@ echo '-------------------' . PHP_EOL;
 
 $course->enrollStudent($student1);
 $course->enrollStudent(new Student('John Doe 2'));
+$course->enrollStudent(new Student('John Doe 2'));
 $course->enrollStudent($student1);
 
 foreach ($course->getEnrolledStudents() as $student) {
