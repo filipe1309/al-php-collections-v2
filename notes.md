@@ -54,3 +54,6 @@ php --ini
 vi ...extension=ds.so
 php -m # ds
 ```
+
+https://medium.com/@rtheunissen/efficient-data-structures-for-php-7-9dda7af674cd
+https://www.php.net/ds
